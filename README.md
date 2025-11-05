@@ -28,8 +28,8 @@ if wezterm.config_builder then
 end
 
 -- Add these lines (to use plugin and its default options):
-base = wezterm.plugin.require("https://github.com/sunbearc22/sb_base.wezterm.git")
-base.apply_to_config(config, {})
+local repo = "https://github.com/sunbearc22/sb_base.wezterm.git"
+wezterm.plugin.require(repo).apply_to_config(config, {})
 
 return config
 ```
@@ -39,8 +39,8 @@ return config
 **Default options**
 
 ```lua
-base = wezterm.plugin.require("https://github.com/sunbearc22/sb_base.wezterm.git")
-base.apply_to_config(config,
+local repo = "https://github.com/sunbearc22/sb_base.wezterm.git"
+wezterm.plugin.require(repo).apply_to_config(config,
   {
     offset_x = 0,         -- Number of pixels from top left corner of screen(s) in x-direction
     offset_y = 0,         -- Number of pixels from top left corner of screen(s) in the negative y-direction
